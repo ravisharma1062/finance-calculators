@@ -1,0 +1,32 @@
+# Optional: refresh src/data/market.json on a schedule.
+# DISABLED on purpose (the job has `if: false`). To use it:
+#   1. write scripts/update-market-data.mjs to fetch public data and write src/data/market.json
+#   2. put any API key in Settings > Secrets and variables > Actions (never in the repo)
+#   3. remove the `if: false` line below
+name: Update market data
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/update-market-data.mjs
+        env:
+          MARKET_API_KEY: ${{ secrets.MARKET_API_KEY }}
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/market.json
+          git diff --staged --quiet || (git commit -m "chore: update market data" && git push)
