@@ -1,0 +1,106 @@
+{
+  "code": "gb",
+  "name": "United Kingdom",
+  "currency": "GBP",
+  "locale": "en-GB",
+  "numberSystem": "international",
+  "languages": ["en"],
+  "amountScale": 0.01,
+  "defaultReturn": 6,
+  "defaultInflation": 2.5,
+  "calculators": [
+    "swp",
+    "sip",
+    "step-up-sip",
+    "lumpsum",
+    "goal-planner",
+    "fire",
+    "inflation",
+    "emi",
+    "loan-prepayment",
+    "fd",
+    "rd",
+    "rent-vs-buy",
+    "isa",
+    "sipp"
+  ],
+  "overrides": {
+    "swp": {
+      "annualReturn": 5,
+      "inflationPct": 2.5
+    },
+    "sip": {
+      "annualReturn": 7,
+      "inflationPct": 2.5
+    },
+    "step-up-sip": {
+      "annualReturn": 7,
+      "inflationPct": 2.5
+    },
+    "lumpsum": {
+      "annualReturn": 7
+    },
+    "goal-planner": {
+      "annualReturn": 6,
+      "goalInflationPct": 2.5
+    },
+    "fire": {
+      "annualReturn": 6,
+      "inflationPct": 2.5,
+      "retirementAge": 55
+    },
+    "inflation": {
+      "inflationPct": 2.5
+    },
+    "emi": {
+      "annualRate": 5,
+      "tenureMonths": 300
+    },
+    "loan-prepayment": {
+      "annualRate": 5,
+      "tenureMonths": 300
+    },
+    "fd": {
+      "annualRate": 4.25,
+      "compounding": "annual"
+    },
+    "rd": {
+      "annualRate": 4,
+      "compounding": "monthly"
+    },
+    "rent-vs-buy": {
+      "loanRate": 5,
+      "loanYears": 25,
+      "buyingCostPct": 4,
+      "sellingCostPct": 2,
+      "appreciationPct": 3,
+      "maintenancePct": 1,
+      "rentIncreasePct": 3,
+      "investReturnPct": 6,
+      "downPaymentPct": 15
+    },
+    "isa": {
+      "yearlyContribution": 10000,
+      "annualReturn": 6,
+      "inflationPct": 2.5
+    },
+    "sipp": {
+      "yearlyContribution": 8000,
+      "annualReturn": 6,
+      "inflationPct": 2.5
+    }
+  },
+  "taxRules": {
+    "isa": {
+      "yearlyLimit": 20000,
+      "lastUpdated": "2025-04-06",
+      "sourceUrl": "https://www.gov.uk/individual-savings-accounts"
+    },
+    "sipp": {
+      "yearlyLimit": 60000,
+      "governmentTopUpPct": 25,
+      "lastUpdated": "2025-04-06",
+      "sourceUrl": "https://www.gov.uk/tax-on-your-private-pension/annual-allowance"
+    }
+  }
+}

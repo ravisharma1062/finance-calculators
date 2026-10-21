@@ -1,0 +1,108 @@
+{
+  "site": {
+    "name": "फाइनेंस कैलकुलेटर",
+    "tagline": "भारत, अमेरिका और ब्रिटेन के लिए मुफ़्त और आसान कैलकुलेटर",
+    "description": "मुफ़्त फाइनेंस कैलकुलेटर: SWP, SIP, FIRE, EMI, लोन प्रीपेमेंट, FD, PPF, NPS और बहुत कुछ। सारी गणना आपके ब्राउज़र में होती है।"
+  },
+  "nav": {
+    "calculators": "कैलकुलेटर",
+    "home": "होम",
+    "skip": "मुख्य सामग्री पर जाएँ",
+    "menu": "मेन्यू",
+    "country": "देश",
+    "language": "भाषा",
+    "theme": "थीम",
+    "themeLight": "लाइट",
+    "themeDark": "डार्क",
+    "themeSystem": "सिस्टम"
+  },
+  "categories": {
+    "invest": "निवेश",
+    "withdraw": "निकासी",
+    "loans": "लोन",
+    "retirement": "रिटायरमेंट",
+    "tax": "टैक्स बचत",
+    "property": "प्रॉपर्टी"
+  },
+  "home": {
+    "title": "मुफ़्त फाइनेंस कैलकुलेटर",
+    "subtitle": "अपने निवेश, निकासी, लोन और रिटायरमेंट की योजना बनाएँ। कोई साइन-अप नहीं। आपके आँकड़े आपके ब्राउज़र से बाहर नहीं जाते।",
+    "searchLabel": "कैलकुलेटर खोजें",
+    "searchPlaceholder": "खोजें, जैसे SWP, लोन, रिटायरमेंट",
+    "noResults": "आपकी खोज से कोई कैलकुलेटर नहीं मिला।"
+  },
+  "footer": {
+    "about": "हमारे बारे में",
+    "privacy": "गोपनीयता",
+    "disclaimer": "अस्वीकरण",
+    "contact": "संपर्क",
+    "source": "सोर्स कोड",
+    "rights": "उपयोग मुफ़्त है। यह वित्तीय सलाह नहीं है।"
+  },
+  "calculator": {
+    "inputs": "आपकी जानकारी",
+    "advanced": "एडवांस्ड विकल्प",
+    "results": "नतीजे",
+    "shortNumbers": "छोटे नंबर",
+    "howItWorks": "यह कैसे काम करता है",
+    "formula": "सूत्र",
+    "faq": "अक्सर पूछे जाने वाले सवाल",
+    "related": "संबंधित कैलकुलेटर",
+    "tryNow": "कैलकुलेटर खोलें"
+  },
+  "actions": {
+    "share": "लिंक शेयर करें",
+    "copied": "लिंक कॉपी हुआ",
+    "print": "प्रिंट",
+    "csv": "CSV डाउनलोड",
+    "reset": "रीसेट"
+  },
+  "disclaimer": {
+    "short": "यह वित्तीय सलाह नहीं है। नतीजे आपके दिए आँकड़ों पर आधारित अनुमान हैं।"
+  },
+  "units": {
+    "years": "{count, plural, one {# साल} other {# साल}}",
+    "months": "{count, plural, one {# महीना} other {# महीने}}",
+    "days": "{count, plural, one {# दिन} other {# दिन}}",
+    "yearsShort": "साल",
+    "monthsShort": "महीने"
+  },
+  "values": {
+    "neverUsedUp": "कभी खत्म नहीं होगा"
+  },
+  "labels": {
+    "moneyLasts": "आपका पैसा चलेगा",
+    "requiredCorpus": "ज़रूरी कॉर्पस",
+    "invested": "निवेश",
+    "totalWithdrawn": "कुल निकासी",
+    "totalReturns": "कुल रिटर्न",
+    "finalBalance": "बची रकम",
+    "balance": "बैलेंस",
+    "futureValue": "भविष्य की कीमत",
+    "emi": "मासिक EMI",
+    "totalInterest": "कुल ब्याज",
+    "maturity": "मैच्योरिटी रकम"
+  },
+  "fields": {
+    "corpus": "कुल निवेश (कॉर्पस)",
+    "withdrawal": "निकासी की रकम",
+    "years": "अवधि",
+    "annualReturn": "अपेक्षित सालाना रिटर्न",
+    "monthlyInvestment": "मासिक निवेश",
+    "loanAmount": "लोन की रकम",
+    "annualRate": "सालाना ब्याज दर"
+  },
+  "options": {
+    "mode": {
+      "useUp": "पैसा खत्म करें",
+      "keep": "मूलधन बचाएँ",
+      "corpus": "कॉर्पस ढूँढें",
+      "duration": "कितना चलेगा",
+      "withdrawal": "निकासी ढूँढें"
+    }
+  },
+  "warnings": {
+    "endsEarly": "आपका पैसा {years} साल {months} महीने चलेगा, {plannedYears} साल {plannedMonths} महीने नहीं।",
+    "neverUsedUp": "मूलधन कभी खत्म नहीं होगा: बढ़त आपकी निकासी से ज़्यादा है।"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "lastUpdated": "2025-04-01",
+  "source": "Sample values for development. Replace with real data before relying on them.",
+  "rates": {
+    "in": { "repoRate": 6.0, "inflation": 3.3 },
+    "us": { "fedFundsRate": 4.5, "inflation": 2.4 },
+    "gb": { "bankRate": 4.5, "inflation": 2.8 }
+  }
+}

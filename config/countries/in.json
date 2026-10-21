@@ -1,0 +1,60 @@
+{
+  "code": "in",
+  "name": "India",
+  "currency": "INR",
+  "locale": "en-IN",
+  "numberSystem": "indian",
+  "languages": ["en", "hi"],
+  "amountScale": 1,
+  "defaultReturn": 12,
+  "defaultInflation": 6,
+  "calculators": [
+    "swp",
+    "sip",
+    "step-up-sip",
+    "lumpsum",
+    "goal-planner",
+    "fire",
+    "inflation",
+    "emi",
+    "loan-prepayment",
+    "fd",
+    "rd",
+    "ppf",
+    "nps",
+    "epf",
+    "rent-vs-buy",
+    "builder-delay-interest"
+  ],
+  "overrides": {
+    "swp": { "annualReturn": 8 },
+    "fire": { "annualReturn": 11 }
+  },
+  "taxRules": {
+    "ppf": {
+      "rate": 7.1,
+      "yearlyLimit": 150000,
+      "minYears": 15,
+      "lastUpdated": "2025-04-01",
+      "sourceUrl": "https://www.nsiindia.gov.in/(S(zxnvwf55mpxhsh3fyrh4fq55))/InternalPage.aspx?Id_Pk=89"
+    },
+    "epf": {
+      "rate": 8.25,
+      "employeePct": 12,
+      "employerEpfPct": 3.67,
+      "lastUpdated": "2025-04-01",
+      "sourceUrl": "https://www.epfindia.gov.in/"
+    },
+    "nps": {
+      "minAnnuityPct": 40,
+      "retirementAge": 60,
+      "lastUpdated": "2025-04-01",
+      "sourceUrl": "https://www.npstrust.org.in/"
+    },
+    "fd": {
+      "indicativeRate": 7,
+      "lastUpdated": "2025-04-01",
+      "sourceUrl": "https://www.rbi.org.in/"
+    }
+  }
+}

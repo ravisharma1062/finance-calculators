@@ -1,0 +1,415 @@
+{
+  "swp": {
+    "name": "SWP Calculator",
+    "short": "See how long your money lasts when you withdraw a fixed amount, or how much you can safely withdraw.",
+    "metaTitle": "SWP Calculator: Systematic Withdrawal Plan",
+    "metaDescription": "Free SWP calculator. Find out how long your money lasts, the corpus you need, or the safe withdrawal. Shows an honest warning if the money ends early.",
+    "intro": "A Systematic Withdrawal Plan (SWP) takes a fixed amount out of your investment at regular times while the rest keeps growing. Use this calculator to see how long the money lasts, how big the corpus must be, or how much you can take out.",
+    "howItWorks": "Each period the balance first earns the period return. Then the withdrawal is taken out (or taken out first, if you choose the start of the period). If the balance is smaller than the withdrawal, the rest is paid and the plan ends. We then tell you how long the money really lasted. The five modes use the same maths in different directions.",
+    "formula": "Period rate i: effective = (1 + r)^(1/n) - 1, nominal = r / n.\nCorpus needed = P x (1 - (1 + i)^-N) / i\nMonths of money = -ln(1 - Corpus x i / P) / ln(1 + i)\nMaximum withdrawal = Corpus x i / (1 - (1 + i)^-N)\nKeep principal: withdraw only Corpus x i each period.\n(P = withdrawal, N = number of periods, n = periods per year)",
+    "fields": {
+      "withdrawal": "Withdrawal each period"
+    },
+    "faq": [
+      {
+        "q": "What is an SWP?",
+        "a": "A Systematic Withdrawal Plan lets you take a fixed amount from your investment at regular times, for example every month. The money left in the investment keeps earning returns."
+      },
+      {
+        "q": "What happens if my money ends before the time I chose?",
+        "a": "We show a clear warning, for example: your money lasts 8 years 5 months, not 12 years. The results then count only the full withdrawals, and any small amount left over is shown as the last payout."
+      },
+      {
+        "q": "What does Keep the principal mean?",
+        "a": "It shows the largest amount you can take each period so that your starting amount stays the same. You take out only the growth. If you raise the withdrawal every year, the first withdrawal must be lower."
+      },
+      {
+        "q": "Which rate method should I use?",
+        "a": "Effective is the default. It treats your yearly return like a real yearly growth (CAGR). Nominal divides the yearly rate evenly by the number of periods, like a bank rate compounded monthly. Nominal gives a slightly higher result."
+      }
+    ]
+  },
+  "sip": {
+    "name": "SIP Calculator",
+    "short": "Find out what a monthly investment can grow to.",
+    "metaTitle": "SIP Calculator: Monthly Investment Growth",
+    "metaDescription": "Free SIP calculator. See the future value of a monthly investment, with optional yearly step-up and inflation-adjusted value.",
+    "intro": "A Systematic Investment Plan (SIP) invests a fixed amount every month. This calculator shows what your SIP can grow to, how much you put in, and how much the returns add.",
+    "howItWorks": "Each month your balance earns the monthly return and your new instalment is added. By default the instalment is invested at the start of the month. You can add a yearly step-up, and an inflation rate to see the value in today's money.",
+    "formula": "Future value = P x ((1 + i)^N - 1) / i x (1 + i)\n(P = monthly amount, i = monthly rate, N = number of months). The last factor (1 + i) is used when you invest at the start of the month.",
+    "faq": [
+      {
+        "q": "Is the return guaranteed?",
+        "a": "No. Market returns change every year. The result is an estimate for the rate you enter."
+      },
+      {
+        "q": "Why does the start of the month give a higher result?",
+        "a": "Each instalment earns one extra month of returns."
+      },
+      {
+        "q": "What is value in today's money?",
+        "a": "It is the future value divided by the effect of inflation, so you can see what the money could buy in today's prices."
+      }
+    ]
+  },
+  "step-up-sip": {
+    "name": "Step-up SIP Calculator",
+    "short": "See how raising your SIP every year grows your wealth.",
+    "metaTitle": "Step-up SIP Calculator",
+    "metaDescription": "Free step-up SIP calculator. Raise your monthly investment every year and compare with a flat SIP.",
+    "intro": "A step-up SIP raises your monthly investment by a fixed percentage every year, in line with your income. This calculator compares it with a flat SIP and shows the extra wealth.",
+    "howItWorks": "The instalment in year k is the first instalment x (1 + step-up)^(k - 1). Everything else works like a normal SIP.",
+    "formula": "Instalment in year k = P x (1 + g)^(k - 1)\nThe balance grows each month at the monthly rate i, and the instalment is added.",
+    "faq": [
+      {
+        "q": "How much step-up should I choose?",
+        "a": "Many people choose a number close to their expected yearly pay rise, for example 5% to 10%."
+      },
+      {
+        "q": "Is a step-up better than a bigger flat SIP?",
+        "a": "A step-up starts smaller, which is easier today, and grows with your income. Compare both with this tool."
+      }
+    ]
+  },
+  "lumpsum": {
+    "name": "Lump Sum Calculator",
+    "short": "Find the future value of a one-time investment, or what to invest today for a target.",
+    "metaTitle": "Lump Sum Calculator",
+    "metaDescription": "Free lump sum calculator. See what a one-time investment grows to, or the amount to invest today to reach a target.",
+    "intro": "Use this calculator to see what a one-time investment can grow to, or to find how much to invest today to reach a target amount.",
+    "howItWorks": "The amount grows by your yearly return each year. For the reverse mode, we divide the target by the growth factor.",
+    "formula": "Future value = P x (1 + r)^t\nAmount to invest today = Target / (1 + r)^t",
+    "fields": {
+      "amount_forward": "Amount to invest",
+      "amount_reverse": "Target amount"
+    },
+    "faq": [
+      {
+        "q": "What is the rule of 72?",
+        "a": "Divide 72 by the yearly return to get the years needed to double your money. At 12% it is about 6 years."
+      },
+      {
+        "q": "Does the result include tax?",
+        "a": "No. Taxes on gains depend on your country and the type of investment."
+      }
+    ]
+  },
+  "goal-planner": {
+    "name": "Goal Planner",
+    "short": "Find the monthly SIP or one-time amount needed for a future goal.",
+    "metaTitle": "Goal Planner Calculator",
+    "metaDescription": "Free goal planning calculator. Find the monthly investment or one-time amount you need for education, a house or any goal, with inflation.",
+    "intro": "Tell us the cost of your goal in today's money and how many years you have. We raise the cost for inflation and tell you the monthly SIP or one-time amount you need.",
+    "howItWorks": "Goal cost at the end = today's cost x (1 + inflation)^years. Your savings grow at the expected return. The shortfall is covered by a SIP invested at the start of each month, or by one amount today.",
+    "formula": "Future goal = G x (1 + f)^t\nShortfall = Future goal - Savings x (1 + r)^t\nSIP = Shortfall / (((1 + i)^N - 1) / i x (1 + i))\nOne-time amount = Shortfall / (1 + r)^t",
+    "faq": [
+      {
+        "q": "Why does the goal cost more in the future?",
+        "a": "Prices rise with inflation. Education and housing often rise faster than general prices, so you can enter a higher number."
+      },
+      {
+        "q": "Should I choose SIP or a one-time amount?",
+        "a": "Both reach the same goal under the same return. A SIP spreads the effort over time. A one-time amount needs money today."
+      }
+    ]
+  },
+  "fire": {
+    "name": "FIRE Calculator",
+    "short": "Find the corpus you need to retire early and when you can reach it.",
+    "metaTitle": "FIRE Calculator: Financial Independence, Retire Early",
+    "metaDescription": "Free FIRE calculator. Find your retirement corpus from your expenses and safe withdrawal rate, and the earliest age you can reach it.",
+    "intro": "FIRE means Financial Independence, Retire Early. You need a corpus big enough that a small yearly withdrawal pays for your expenses for life. This calculator finds that corpus and checks whether your savings reach it.",
+    "howItWorks": "We raise your yearly expenses with inflation up to the year you retire. The corpus needed is those expenses divided by the safe withdrawal rate. Then we grow your savings and SIP year by year and compare with the corpus needed in each year.",
+    "formula": "Expenses at retirement = E x (1 + f)^years\nFIRE corpus = Expenses at retirement / safe withdrawal rate\nThe default safe withdrawal rate is 3.5% and you can change it.",
+    "faq": [
+      {
+        "q": "What is a safe withdrawal rate?",
+        "a": "It is the share of your corpus you can spend each year without running out. 4% is a well-known US rule. A lower number like 3.5% is more careful for a long retirement or for higher inflation."
+      },
+      {
+        "q": "Does this include taxes?",
+        "a": "No. Add a margin to your expenses for taxes if they apply to you."
+      },
+      {
+        "q": "What if I do not reach the target?",
+        "a": "We show the gap and the extra monthly saving that would close it."
+      }
+    ]
+  },
+  "inflation": {
+    "name": "Inflation Calculator",
+    "short": "See what things will cost later, and how much buying power your money loses.",
+    "metaTitle": "Inflation Calculator",
+    "metaDescription": "Free inflation calculator. Find the future cost of something you buy today and the buying power of your money later.",
+    "intro": "Inflation makes the same things cost more over time. Use this calculator to see the future cost and the buying power of your money.",
+    "howItWorks": "Future cost = amount x (1 + inflation)^years. Buying power left = amount / (1 + inflation)^years.",
+    "formula": "Future cost = A x (1 + f)^t\nBuying power left = A / (1 + f)^t",
+    "faq": [
+      {
+        "q": "Which inflation rate should I use?",
+        "a": "Use the average inflation in your country, or a higher number for costs that rise faster, such as education or healthcare."
+      },
+      {
+        "q": "Why does cash lose value?",
+        "a": "If your money earns less than inflation, it can buy less each year."
+      }
+    ]
+  },
+  "emi": {
+    "name": "EMI Calculator",
+    "short": "Find your monthly loan payment, total interest and full repayment schedule.",
+    "metaTitle": "EMI Calculator: Loan Payment and Schedule",
+    "metaDescription": "Free EMI calculator. Find your monthly payment, total interest and a full month-by-month schedule for any loan.",
+    "intro": "EMI stands for Equated Monthly Instalment. Enter the loan amount, interest rate and time to see your monthly payment, the total interest and how each payment splits between principal and interest.",
+    "howItWorks": "Each month interest is charged on the balance. The rest of your EMI repays the principal, so the balance falls and the interest part shrinks over time.",
+    "formula": "EMI = P x i x (1 + i)^N / ((1 + i)^N - 1)\n(P = loan amount, i = monthly rate, N = number of months)",
+    "faq": [
+      {
+        "q": "Why is most of my early EMI interest?",
+        "a": "Interest is charged on the full balance at the start, so the interest part is biggest in the early years."
+      },
+      {
+        "q": "Does a longer time lower my EMI?",
+        "a": "Yes, but you pay much more interest in total."
+      },
+      {
+        "q": "Does this match my bank?",
+        "a": "Banks use the nominal rate divided by 12 (the default here). Fees and rate changes are not included."
+      }
+    ]
+  },
+  "loan-prepayment": {
+    "name": "Loan Prepayment Calculator",
+    "short": "See how much interest and time you save by paying part of your loan early.",
+    "metaTitle": "Loan Prepayment Calculator",
+    "metaDescription": "Free loan prepayment calculator. See the interest you save and how much sooner you finish, or how much lower your EMI gets.",
+    "intro": "A part payment lowers your loan balance, so you pay less interest. Choose whether it should shorten the loan or lower the EMI, and see the savings.",
+    "howItWorks": "We run your loan month by month. At the month you choose, the part payment is taken off the balance. If you want a lower EMI, the EMI is worked out again for the remaining months. Extra monthly payments go straight to the principal.",
+    "formula": "New EMI (lower EMI option) = Balance x i x (1 + i)^M / ((1 + i)^M - 1)\n(M = months left after the part payment)",
+    "faq": [
+      {
+        "q": "Is it better to shorten the loan or lower the EMI?",
+        "a": "Shortening the loan usually saves more interest. Lowering the EMI gives you more cash each month."
+      },
+      {
+        "q": "Are there prepayment fees?",
+        "a": "Some loans charge a fee. This calculator does not include it."
+      }
+    ]
+  },
+  "fd": {
+    "name": "FD Calculator",
+    "short": "Find the maturity amount of a fixed deposit.",
+    "metaTitle": "FD Calculator: Fixed Deposit Maturity",
+    "metaDescription": "Free fixed deposit calculator. Find the maturity amount, interest earned and real yearly yield for monthly, quarterly, half-yearly or yearly compounding.",
+    "intro": "A fixed deposit (FD) pays interest at a rate fixed in advance. Enter the amount, rate and time to find the maturity amount.",
+    "howItWorks": "Banks quote a nominal yearly rate and add interest several times a year. More frequent adding gives a slightly higher real yearly yield.",
+    "formula": "Maturity = P x (1 + r / n)^(n x t)\n(n = times interest is added per year)",
+    "fields": {
+      "amount": "Deposit amount"
+    },
+    "faq": [
+      {
+        "q": "Which compounding do banks use?",
+        "a": "It depends on the bank and country. Quarterly is common in India, monthly or daily in the US, and yearly in some UK accounts."
+      },
+      {
+        "q": "Is interest taxed?",
+        "a": "Often yes. Enter your tax rate in the advanced options to see the amount after tax."
+      }
+    ]
+  },
+  "rd": {
+    "name": "RD Calculator",
+    "short": "Find the maturity amount of a recurring deposit.",
+    "metaTitle": "RD Calculator: Recurring Deposit Maturity",
+    "metaDescription": "Free recurring deposit calculator. Find the maturity amount and interest for a monthly deposit.",
+    "intro": "A recurring deposit (RD) lets you deposit a fixed amount every month. Each deposit earns interest until the end.",
+    "howItWorks": "Each monthly deposit grows from the day it is made until maturity at the quoted rate and compounding.",
+    "formula": "Maturity = sum of D x (1 + r / n)^(n x remaining years) for every deposit D",
+    "fields": {
+      "amount": "Monthly deposit"
+    },
+    "faq": [
+      {
+        "q": "How is an RD different from a SIP?",
+        "a": "An RD has a fixed interest rate. A SIP in market investments has returns that change."
+      },
+      {
+        "q": "Can I miss a deposit?",
+        "a": "Banks may charge a fee. This calculator assumes you never miss one."
+      }
+    ]
+  },
+  "ppf": {
+    "name": "PPF Calculator",
+    "short": "Find the maturity value of your Public Provident Fund (India).",
+    "metaTitle": "PPF Calculator (India)",
+    "metaDescription": "Free PPF calculator. Find the maturity amount for yearly deposits in the Public Provident Fund.",
+    "intro": "The Public Provident Fund (PPF) is a long-term savings scheme in India with a government-set interest rate. This calculator shows the maturity amount for your yearly deposit.",
+    "howItWorks": "Interest is added once a year. If you deposit at the start of the year, the deposit earns interest for the whole year. The rate and yearly limit come from the country rules shown below and can change.",
+    "formula": "Balance after each year = (Previous balance + Deposit) x (1 + r)  [deposit at start of year]",
+    "faq": [
+      {
+        "q": "What is the lock-in?",
+        "a": "PPF has a lock-in of 15 years. After that you can extend it in blocks of 5 years."
+      },
+      {
+        "q": "Is the rate fixed?",
+        "a": "No. The government reviews the rate every quarter. Check the official source for the current rate."
+      }
+    ]
+  },
+  "nps": {
+    "name": "NPS Calculator",
+    "short": "Estimate your NPS corpus, lump sum and monthly pension (India).",
+    "metaTitle": "NPS Calculator (India)",
+    "metaDescription": "Free National Pension System calculator. Estimate your corpus, lump sum and monthly pension at retirement.",
+    "intro": "The National Pension System (NPS) is a retirement scheme in India. At retirement part of the corpus must buy an annuity (a monthly pension) and the rest can be taken as a lump sum.",
+    "howItWorks": "We grow your monthly contributions until retirement. The annuity share of the corpus gives a monthly pension at the annuity rate you enter. The rest is your lump sum.",
+    "formula": "Pension per month = Corpus x annuity share x annuity rate / 12",
+    "faq": [
+      {
+        "q": "How much must go into an annuity?",
+        "a": "The rules ask for a minimum share. The value used here comes from the country rules below. Check the official source for the latest rule."
+      },
+      {
+        "q": "Are the returns guaranteed?",
+        "a": "No. NPS returns depend on the markets."
+      }
+    ]
+  },
+  "epf": {
+    "name": "EPF Calculator",
+    "short": "Estimate your Employees' Provident Fund balance at retirement (India).",
+    "metaTitle": "EPF Calculator (India)",
+    "metaDescription": "Free EPF calculator. Estimate your provident fund balance at retirement from your salary, contributions and interest rate.",
+    "intro": "The Employees' Provident Fund (EPF) collects a share of your salary from you and your employer every month. This calculator estimates the balance at retirement.",
+    "howItWorks": "Every month your contribution and your employer's EPF share are added. Interest is worked out monthly on the running balance and added at the end of each year. Your salary rises by the yearly increase you enter.",
+    "formula": "Monthly contribution = Basic salary x (employee % + employer EPF %)\nInterest for a month = Balance x r / 12 (added each year)",
+    "faq": [
+      {
+        "q": "Why is the employer share lower than 12%?",
+        "a": "Part of the employer's 12% goes to the pension scheme (EPS), not the EPF. The default here is 3.67% for the EPF."
+      },
+      {
+        "q": "Is the interest rate fixed?",
+        "a": "No. It is set every year. Check the official source for the latest rate."
+      }
+    ]
+  },
+  "rent-vs-buy": {
+    "name": "Rent vs Buy Calculator",
+    "short": "Compare your net worth if you buy a home or rent and invest.",
+    "metaTitle": "Rent vs Buy Calculator",
+    "metaDescription": "Free rent vs buy calculator. Compare the net worth after N years if you buy a home with a loan or rent and invest the difference.",
+    "intro": "Should you buy a home or keep renting? This calculator compares your net worth after some years in both cases using your assumptions.",
+    "howItWorks": "If you buy, your net worth is the home value (less selling costs) minus the loan left. If you rent, you invest the down payment and the buying costs, and each month you invest what buying would have cost above your rent. Rent rises every year.",
+    "formula": "Buy net worth = Home value x (1 - selling cost) - Loan left\nRent net worth = Investment pot that grows at your investment return",
+    "faq": [
+      {
+        "q": "Does this give a final answer?",
+        "a": "No. The result depends heavily on home price growth, rent and returns. Try a few different numbers."
+      },
+      {
+        "q": "What is not included?",
+        "a": "Taxes, loan interest tax benefits, insurance and the value of living in your own home are not included."
+      }
+    ]
+  },
+  "builder-delay-interest": {
+    "name": "Builder Delay Interest Calculator",
+    "short": "Find the interest a builder owes you for a late home handover.",
+    "metaTitle": "Builder Delay Interest Calculator",
+    "metaDescription": "Free calculator for interest on delayed possession of a home. Enter the amount paid, rate and dates.",
+    "intro": "If a builder hands over your home late, you may be owed interest on the money you paid. Enter the amount, the interest rate and the dates to estimate it.",
+    "howItWorks": "We use simple interest on the amount paid, for each day of delay. Check the rate and the rules in your agreement and local law.",
+    "formula": "Interest = Amount paid x rate x days of delay / 365",
+    "faq": [
+      {
+        "q": "Which rate should I use?",
+        "a": "Use the rate in your builder agreement or the rate set by your local real estate rules. The rate here is only an example."
+      },
+      {
+        "q": "Is this legal advice?",
+        "a": "No. It is an estimate. Talk to a lawyer about your case."
+      }
+    ]
+  },
+  "401k": {
+    "name": "401(k) Calculator",
+    "short": "Estimate your 401(k) balance with employer match (US).",
+    "metaTitle": "401(k) Calculator (US)",
+    "metaDescription": "Free 401(k) calculator. Estimate your retirement balance with employer match and yearly contributions.",
+    "intro": "A 401(k) is an employer retirement plan in the United States. Many employers add a match to your contribution. This calculator estimates your balance.",
+    "howItWorks": "Each year your contribution and the employer match are added and the whole balance earns the yearly return. The yearly limit comes from the country rules below.",
+    "formula": "Balance after each year = (Previous balance + your contribution + match) x (1 + r)",
+    "faq": [
+      {
+        "q": "What is an employer match?",
+        "a": "It is money your employer adds when you contribute, for example 50% of your contribution."
+      },
+      {
+        "q": "Does this include taxes?",
+        "a": "No. Traditional and Roth accounts are taxed differently."
+      }
+    ]
+  },
+  "ira": {
+    "name": "IRA Calculator",
+    "short": "Estimate your IRA balance at retirement (US).",
+    "metaTitle": "IRA Calculator (US)",
+    "metaDescription": "Free IRA calculator. Estimate the future value of yearly contributions to an Individual Retirement Account.",
+    "intro": "An Individual Retirement Account (IRA) is a personal retirement account in the United States. This calculator estimates your balance with yearly contributions.",
+    "howItWorks": "Each year your contribution is added and the balance earns the yearly return. The yearly limit comes from the country rules below.",
+    "formula": "Balance after each year = (Previous balance + contribution) x (1 + r)",
+    "faq": [
+      {
+        "q": "What is the yearly limit?",
+        "a": "It is set by the tax authority and changes over time. See the source link in the rules."
+      },
+      {
+        "q": "Traditional or Roth?",
+        "a": "They are taxed differently. This calculator shows the pre-tax growth only."
+      }
+    ]
+  },
+  "isa": {
+    "name": "ISA Calculator",
+    "short": "Estimate the growth of your Individual Savings Account (UK).",
+    "metaTitle": "ISA Calculator (UK)",
+    "metaDescription": "Free ISA calculator. Estimate the future value of yearly contributions to a UK Individual Savings Account.",
+    "intro": "An Individual Savings Account (ISA) lets you save or invest in the United Kingdom without paying tax on the interest or gains. This calculator estimates the growth.",
+    "howItWorks": "Each year your contribution is added and the balance earns the yearly return. The yearly allowance comes from the country rules below.",
+    "formula": "Balance after each year = (Previous balance + contribution) x (1 + r)",
+    "faq": [
+      {
+        "q": "What is the yearly allowance?",
+        "a": "It is set by the government for each tax year. See the source link in the rules."
+      },
+      {
+        "q": "Is the growth guaranteed?",
+        "a": "No. Cash ISAs pay a stated rate. Stocks and shares ISAs depend on the markets."
+      }
+    ]
+  },
+  "sipp": {
+    "name": "SIPP Calculator",
+    "short": "Estimate your pension with government tax relief (UK).",
+    "metaTitle": "SIPP Calculator (UK)",
+    "metaDescription": "Free SIPP calculator. Estimate the value of a self-invested personal pension with tax relief top-up.",
+    "intro": "A Self-Invested Personal Pension (SIPP) is a UK pension you manage yourself. The government adds basic-rate tax relief to what you pay in. This calculator estimates the pot.",
+    "howItWorks": "Each year your payment and the government top-up are added and the whole pot earns the yearly return. The top-up rate and annual allowance come from the country rules below.",
+    "formula": "Balance after each year = (Previous balance + payment + top-up) x (1 + r)",
+    "faq": [
+      {
+        "q": "What is the top-up?",
+        "a": "For every 80 you pay in, the provider claims 20 from the government. That is a 25% top-up on what you pay."
+      },
+      {
+        "q": "Can I take the money any time?",
+        "a": "No. There is a minimum age. Check the official source for the current rules."
+      }
+    ]
+  }
+}

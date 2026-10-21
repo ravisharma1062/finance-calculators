@@ -1,0 +1,107 @@
+{
+  "code": "us",
+  "name": "United States",
+  "currency": "USD",
+  "locale": "en-US",
+  "numberSystem": "international",
+  "languages": ["en"],
+  "amountScale": 0.0125,
+  "defaultReturn": 7,
+  "defaultInflation": 3,
+  "calculators": [
+    "swp",
+    "sip",
+    "step-up-sip",
+    "lumpsum",
+    "goal-planner",
+    "fire",
+    "inflation",
+    "emi",
+    "loan-prepayment",
+    "fd",
+    "rd",
+    "rent-vs-buy",
+    "401k",
+    "ira"
+  ],
+  "overrides": {
+    "swp": {
+      "annualReturn": 6,
+      "inflationPct": 3
+    },
+    "sip": {
+      "annualReturn": 8,
+      "inflationPct": 3
+    },
+    "step-up-sip": {
+      "annualReturn": 8,
+      "inflationPct": 3
+    },
+    "lumpsum": {
+      "annualReturn": 8
+    },
+    "goal-planner": {
+      "annualReturn": 7,
+      "goalInflationPct": 3
+    },
+    "fire": {
+      "annualReturn": 7,
+      "inflationPct": 3,
+      "currentAge": 30,
+      "retirementAge": 50
+    },
+    "inflation": {
+      "inflationPct": 3
+    },
+    "emi": {
+      "annualRate": 6.5,
+      "tenureMonths": 360
+    },
+    "loan-prepayment": {
+      "annualRate": 6.5,
+      "tenureMonths": 360
+    },
+    "fd": {
+      "annualRate": 4.5,
+      "compounding": "monthly"
+    },
+    "rd": {
+      "annualRate": 4.25,
+      "compounding": "monthly"
+    },
+    "rent-vs-buy": {
+      "loanRate": 6.5,
+      "loanYears": 30,
+      "buyingCostPct": 3,
+      "sellingCostPct": 6,
+      "appreciationPct": 3.5,
+      "maintenancePct": 1.5,
+      "rentIncreasePct": 3,
+      "investReturnPct": 7,
+      "downPaymentPct": 20
+    },
+    "401k": {
+      "yearlyContribution": 15000,
+      "annualReturn": 7,
+      "inflationPct": 3
+    },
+    "ira": {
+      "yearlyContribution": 7000,
+      "annualReturn": 7,
+      "inflationPct": 3
+    }
+  },
+  "taxRules": {
+    "401k": {
+      "yearlyLimit": 23500,
+      "employerMatchPct": 50,
+      "lastUpdated": "2025-01-01",
+      "sourceUrl": "https://www.irs.gov/retirement-plans/401k-plans"
+    },
+    "ira": {
+      "yearlyLimit": 7000,
+      "lastUpdated": "2025-01-01",
+      "sourceUrl": "https://www.irs.gov/retirement-plans/individual-retirement-arrangements-iras"
+    }
+  }
+}
