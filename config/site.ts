@@ -43,7 +43,7 @@ export const siteConfig = {
   basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? '',
   analyticsDomain: process.env.NEXT_PUBLIC_ANALYTICS_DOMAIN ?? '',
   githubUrl: 'https://github.com/ravisharma1062/finance-calculators',
-  issuesUrl: 'https://github.com/ravisharma1062/finance-calculators/issues',
+  contactEmail: 'ravisharma.1062@gmail.com',
 };
 
 export function parseLocale(locale: string): { language: string; country: CountryConfig } {

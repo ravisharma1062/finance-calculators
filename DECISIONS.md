@@ -68,7 +68,7 @@ Not built. Pages have `og:title`, `og:description` and canonical/hreflang tags. 
 - **Currency amounts for other countries** are the Indian defaults times `amountScale` and rounded to a nice number (for example 20 lakh becomes 25,000 in US dollars). They are only starting points.
 - **"Today" is not known at build time.** The first render uses a fixed placeholder date so the pre-built HTML and the first browser render match, then the real date is set after load. "Today" is not written into share links.
 - **Share link.** Only inputs that differ from the defaults are written to the query string. Unknown keys and wrong types in a link are ignored.
-- **Contact link** in the footer goes to the GitHub issues page, so no personal email address is published.
+- **Contact link** in the footer is a `mailto:` link to the site owner's email (`contactEmail` in `config/site.ts`), added at the owner's request. The address is public in the page source.
 - **Analytics** use Plausible and are off unless `NEXT_PUBLIC_ANALYTICS_DOMAIN` is set at build time.
 - **No licence file** was added. Choose one before inviting contributions.
 - **Scheduled data workflow** (`update-data.yml`) is present but disabled (`if: false`). `marketData.ts` reads `src/data/market.json`, which holds sample values.

@@ -19,7 +19,7 @@ export async function Footer() {
           <Link href="/disclaimer" className={linkClass}>
             {t('disclaimer')}
           </Link>
-          <a href={siteConfig.issuesUrl} className={linkClass} rel="noopener noreferrer">
+          <a href={`mailto:${siteConfig.contactEmail}`} className={linkClass}>
             {t('contact')}
           </a>
         </nav>
