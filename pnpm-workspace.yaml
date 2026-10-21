@@ -1,4 +1,8 @@
 packages:
   - packages/*
 overrides:
-  '@swc/core': '1.15.47'
+  "@swc/core": "1.15.47"
+# These packages ship their binaries as separate optional packages and do not need an install script.
+allowBuilds:
+  "@swc/core": false
+  unrs-resolver: false
