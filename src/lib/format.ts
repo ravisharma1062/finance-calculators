@@ -39,6 +39,7 @@ export function makeFormatters(locale: string, country: CountryConfig): Formatte
     style: 'currency',
     currency: country.currency,
     notation: 'compact',
+    minimumFractionDigits: 0,
     maximumFractionDigits: 2,
   });
   return {
