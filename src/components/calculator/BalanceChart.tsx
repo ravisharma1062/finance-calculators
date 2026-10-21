@@ -26,6 +26,7 @@ export interface BalanceChartProps {
 const COLORS = ['var(--chart-1)', 'var(--chart-2)', 'var(--chart-3)'];
 
 export default function BalanceChart({ spec, labels, xLabel, formatValue, formatAxis, ariaLabel }: BalanceChartProps) {
+  const animate = typeof window !== 'undefined' && !window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
   return (
     <div role="img" aria-label={ariaLabel} className="h-72 w-full">
       <ResponsiveContainer width="100%" height="100%">
@@ -60,7 +61,16 @@ export default function BalanceChart({ spec, labels, xLabel, formatValue, format
             const name = labels[s.key] ?? s.key;
             if (s.type === 'bar')
               return (
-                <Bar key={s.key} dataKey={s.key} name={name} stackId={s.stack} fill={color} isAnimationActive={false} />
+                <Bar
+                  key={s.key}
+                  dataKey={s.key}
+                  name={name}
+                  stackId={s.stack}
+                  fill={color}
+                  isAnimationActive={animate}
+                  animationDuration={800}
+                  animationEasing="ease-out"
+                />
               );
             if (s.type === 'line')
               return (
@@ -72,7 +82,9 @@ export default function BalanceChart({ spec, labels, xLabel, formatValue, format
                   strokeWidth={2}
                   dot={false}
                   type="monotone"
-                  isAnimationActive={false}
+                  isAnimationActive={animate}
+                  animationDuration={800}
+                  animationEasing="ease-out"
                 />
               );
             return (
@@ -85,7 +97,9 @@ export default function BalanceChart({ spec, labels, xLabel, formatValue, format
                 fillOpacity={0.18}
                 strokeWidth={2}
                 type="monotone"
-                isAnimationActive={false}
+                isAnimationActive={animate}
+                animationDuration={800}
+                animationEasing="ease-out"
               />
             );
           })}

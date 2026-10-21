@@ -59,14 +59,16 @@ export function HomeSearch({ items, categories, labels }: HomeSearchProps) {
               {cat.title}
             </h2>
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {list.map((i) => (
-                <li key={i.slug}>
+              {list.map((i, n) => (
+                <li key={i.slug} className="fade-up" style={{ animationDelay: `${Math.min(n, 8) * 50}ms` }}>
                   <Link
                     href={`/calculators/${i.slug}`}
-                    className="flex h-full gap-3 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 no-underline transition-shadow hover:shadow-md"
+                    className="group flex h-full gap-3 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4 no-underline shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-lg"
                     style={{ color: 'var(--fg)' }}
                   >
-                    <CalcIcon name={i.icon} className="mt-1 size-6 shrink-0 text-[var(--accent)]" />
+                    <span className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-soft)] text-[var(--accent)] transition-transform duration-200 group-hover:scale-110 group-hover:rotate-3">
+                      <CalcIcon name={i.icon} className="size-5" />
+                    </span>
                     <span>
                       <span className="block font-semibold">{i.name}</span>
                       <span className="block text-sm text-[var(--fg-muted)]">{i.short}</span>

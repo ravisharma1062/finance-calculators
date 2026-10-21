@@ -186,6 +186,9 @@ export function CalculatorClient({ slug }: { slug: string }) {
     id: c.id,
     label: t(`labels.${c.id}`),
     value: formatValue(c.value, c.kind),
+    ...(typeof c.value === 'number' && ['currency', 'percent', 'number'].includes(c.kind)
+      ? { raw: c.value, format: (n: number) => formatValue(n, c.kind) }
+      : {}),
     tone: c.tone,
   }));
 

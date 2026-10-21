@@ -43,9 +43,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           inLanguage: locale,
         }}
       />
-      <section className="mx-auto max-w-3xl text-center">
-        <h1 className="text-3xl font-bold sm:text-4xl">{t('home.title')}</h1>
-        <p className="mt-3 text-lg text-[var(--fg-muted)]">{t('home.subtitle')}</p>
+      <section className="hero relative isolate overflow-hidden rounded-3xl border border-[var(--border)] px-6 py-14 text-center">
+        <div className="hero-blob hero-blob-a" aria-hidden="true" />
+        <div className="hero-blob hero-blob-b" aria-hidden="true" />
+        <div className="mx-auto max-w-3xl">
+          <h1 className="fade-up text-3xl font-extrabold tracking-tight sm:text-5xl">{t('home.title')}</h1>
+          <p className="fade-up mt-4 text-lg text-[var(--fg-muted)]" style={{ animationDelay: '90ms' }}>
+            {t('home.subtitle')}
+          </p>
+        </div>
       </section>
       <HomeSearch
         items={items}

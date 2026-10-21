@@ -21,7 +21,7 @@ export async function Header() {
   })).filter((g) => g.items.length > 0);
 
   return (
-    <header className="no-print border-b border-[var(--border)] bg-[var(--surface)]">
+    <header className="no-print sticky top-0 z-40 border-b border-[var(--border)] bg-[var(--surface)]/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
         <Link
           href="/"
