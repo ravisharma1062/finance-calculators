@@ -22,9 +22,6 @@ export async function Footer() {
           <a href={siteConfig.issuesUrl} className={linkClass} rel="noopener noreferrer">
             {t('contact')}
           </a>
-          <a href={siteConfig.githubUrl} className={linkClass} rel="noopener noreferrer">
-            {t('source')}
-          </a>
         </nav>
       </div>
     </footer>
