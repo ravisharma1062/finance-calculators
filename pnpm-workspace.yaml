@@ -1,0 +1,4 @@
+packages:
+  - packages/*
+overrides:
+  '@swc/core': '1.15.47'
